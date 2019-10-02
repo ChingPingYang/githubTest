@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form id='form' name="form" action="/child.html" method="GET">
+        <div class="items">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" placeholder="yourName">
+        </div>
+        <div class="items">
+            <label for="email">E-mail:</label>
+            <input type="email" name="email" id="email" placeholder="email">
+        </div>
+        <input type="submit">
+
+    </form>
+
+	
+    <script>
+        let form = document.getElementById("form");
+        form.addEventListener('submit', (e) => {
+            // e.preventDefault();
+            
+        });
+        class UserBuilder{
+            constructor(name, {age, number= 1, hobby} = {}){
+                this.name = name;
+                this.age = age;
+                this. number = number;
+                this.hobby = hobby;
+            }
+        }
+
+        let x = new UserBuilder("James", {hobby: "dance"});
+        x.age = 120;
+        console.log(x);
+        
+
+    </script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
